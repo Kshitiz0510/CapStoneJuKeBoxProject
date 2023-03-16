@@ -1,0 +1,18 @@
+create database userdetails;
+use userdetails;
+create table logindetails(name varchar(20),userName varchar(20),email varchar(50),password varchar(20));
+select * from logindetails;
+drop table logindetails;
+drop table music;
+create table music(genre varchar(20),Artist varchar(20),songName varchar(50),songID int primary key,songPath varchar(100));
+insert into music value("Jass","Sean Paul","Cheap Thrills",100,"Cheap Thrills.wav");
+insert into music value("Jass","Charlie Puth","We dont talk anymore",101,"We Don't Talk Anymore - Charlie Puth (feat. Selena Gomez)- [PagalWorld.NL].wav");
+insert into music value("Rock","Ed Sheeran","Shape of you",102,"Shape of You Mp3 Ed Sheeran.wav");
+insert into music value("Indie","Arijit Singh","Shayad",103,"Shayad - Love Aaj Kal 128 Kbps.wav");
+select * from music;
+create table playlist(PlaylistName varchar(20) ,SongName varchar(50),SongID int,SongPath varchar(100)) ;
+SELECT * from music where songName="We don't talk anymore";
+drop table playlist;
+select * from playlist;
+set sql_safe_updates=0;
+delete from  playlist where PlaylistName="Bhangra";
